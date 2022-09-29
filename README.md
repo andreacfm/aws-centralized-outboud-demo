@@ -3,18 +3,26 @@
 ### Before applying
 
 * You must have 3 aws accounts ready to use (master, prod and dev)
-* You will use credentials from the master account to run the terraform plan. Ensure that this profile may assume
+* You will use credentials for the master account to run the terraform plan. Ensure that this profile may assume
 a role in dev and prod account. For this demo you will assign Admin permissions to these roles (not recommended for production)
-* The architecture will create the required VPC endpoints to start an ssm session with an ec2 instance deployed in dev and in prod account
 
 ### Architecture
 
 
 
+* The architecture will create the required VPC endpoints to start a ssm session with an ec2 instances deployed in dev and prod private subnets
 
-### Test the deployment
+### Deploy
 
-The terraform apply will give you on output that looks like:
+Create a terraform.tfvars with the required variables:
+
+```shell
+prod_iam_role_arn = "Role arn in prod account that can be assumed by the master account executing the terraform plan"
+dev_iam_role_arn  = "Role arn in dev account that can be assumed by the master account executing the terraform plan"
+aws_region        = "us-east-1"
+```
+
+Plan and apply terraform. You will give you on output that looks like the following:
 
 ```shell
 dev_instance_id = "i-0498bc740f2fc2cee"
