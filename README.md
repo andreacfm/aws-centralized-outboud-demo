@@ -10,7 +10,7 @@ a role in dev and prod account. For this demo you will assign Admin permissions 
 
 
 
-* The architecture will create the required VPC endpoints to start a ssm session with an ec2 instances deployed in dev and prod private subnets
+* In this example we will create the required VPC endpoints to start a ssm session with an ec2 instances deployed in dev and prod private subnets
 
 ### Deploy
 
