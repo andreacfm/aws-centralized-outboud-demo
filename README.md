@@ -8,8 +8,7 @@ a role in dev and prod account. For this demo you will assign Admin permissions 
 
 ### Architecture
 
-![outboud](https://user-images.githubusercontent.com/47330/193044792-8fbe73ae-e34b-455b-b404-b7a5237020eb.jpg)
-
+![outboud](https://user-images.githubusercontent.com/47330/193579825-c3b9d450-e8c6-45ee-a7e9-5b09e813b617.jpg)
 
 * In this example we will create the required VPC endpoints to start a ssm session with an ec2 instances deployed in dev and prod private subnets
 
